@@ -37,14 +37,14 @@
         android:layout_marginBottom="10dp"
         android:backgroundTint="#86000000"
         android:text="사진 앨범"
-        app:layout_constraintBottom_toTopOf="@+id/memopad"
+        app:layout_constraintBottom_toTopOf="@+id/btn_memopad"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_phonenum_book" />
 
     <Button
-        android:id="@+id/memopad"
+        android:id="@+id/btn_memopad"
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginBottom="301dp"

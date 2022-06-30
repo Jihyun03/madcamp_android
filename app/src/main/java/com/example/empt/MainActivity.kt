@@ -18,6 +18,10 @@ class MainActivity : AppCompatActivity() {
             val intent2 = Intent(this,SubActivity2::class.java)
             startActivity(intent2)
         })
+        btn_memopad.setOnClickListener({
+            val intent3 = Intent(this,SubActivity3::class.java)
+            startActivity(intent3)
+        })
     }
 
 
