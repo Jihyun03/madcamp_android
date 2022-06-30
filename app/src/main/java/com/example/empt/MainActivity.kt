@@ -14,6 +14,10 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this,SubActivity1::class.java)
             startActivity(intent)
         })
+        btn_photo_book.setOnClickListener({
+            val intent2 = Intent(this,SubActivity2::class.java)
+            startActivity(intent2)
+        })
     }
 
 
