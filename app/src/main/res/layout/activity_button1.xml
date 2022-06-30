@@ -9,50 +9,37 @@
     android:orientation="vertical"
     tools:context=".SubActivity1">
 
-    <!--    <TextView-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:text="Hello World!"-->
-    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+        <ListView
+        android:id="@+id/phonenum_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:nestedScrollingEnabled="true"
+        android:backgroundTint="#9F5FD6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+    </ListView></LinearLayout>
 
-    <!--    <Button-->
-    <!--        android:id="@+id/btn_close"-->
-    <!--        android:layout_width="100dp"-->
-    <!--        android:layout_height="50dp"-->
-    <!--        android:layout_marginTop="260dp"-->
-    <!--        android:layout_marginBottom="10dp"-->
-    <!--        android:backgroundTint="#009688"-->
-    <!--        android:text="뒤로가기"-->
-    <!--        app:layout_constraintBottom_toTopOf="parent"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintHorizontal_bias="0.5"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toTopOf="parent" />-->
 
 
     <ImageButton
         android:id="@+id/backbutton1"
         android:layout_width="62dp"
         android:layout_height="46dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="36dp"
+        android:layout_gravity="center_horizontal"
         android:adjustViewBounds="true"
         android:backgroundTint="@color/white"
         android:padding="0dp"
         android:scaleType="fitCenter"
-        android:src="@drawable/back_arrow"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ListView
-        android:id="@+id/phonenum_list"
-        android:layout_width="407dp"
-        android:layout_height="598dp"
-        android:layout_marginBottom="50dp"
-        android:backgroundTint="#9F5FD6"
+        android:src="@drawable/home"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
 
 </LinearLayout>
