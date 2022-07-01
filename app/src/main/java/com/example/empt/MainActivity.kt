@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         })
         btn_photo_book.setOnClickListener({
             val intent2 = Intent(this,SubActivity2::class.java)
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(intent2)
         })
         btn_memopad.setOnClickListener({
