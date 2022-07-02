@@ -4,20 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SubActivity2_2">
+    tools:context="SubActivity2_2">
 
-    <GridView
-        android:id="@+id/gridview"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/Recycle"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="46dp"
-        android:numColumns="2"
-        app:layout_constraintBottom_toTopOf="@id/backbutton2_2"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
-    </GridView>
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        tools:listitem="@layout/galleryitem" />
 
     <ImageButton
         android:id="@+id/backbutton2_2"
@@ -33,6 +28,8 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintHorizontal_bias="0.5"/>
+        />
+
     <ImageButton
         android:id="@+id/scrollview_button"
         android:layout_width="62dp"
