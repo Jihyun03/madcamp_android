@@ -96,7 +96,7 @@ class NoteAdapter(private val items: List<NoteList>) :
                 val alertDialog = AlertDialog.Builder(context)
                 var cursor: Cursor
                 alertDialog.setMessage("삭제하시겠습니까?")
-                alertDialog.setPositiveButton("예") { _, _ ->
+                alertDialog.setPositiveButton("네") { _, _ ->
                     val position = adapterPosition
                     cursor = if (sort == "desc") {
                         database.rawQuery(
