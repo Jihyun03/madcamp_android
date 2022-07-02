@@ -4,6 +4,7 @@ import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
+import android.content.Intent
 import android.graphics.Point
 import android.graphics.Rect
 import android.graphics.RectF
@@ -48,8 +49,12 @@ class SubActivity2 : FragmentActivity() {
 
         shortAnimationDuration = resources.getInteger(android.R.integer.config_shortAnimTime)
         backbutton2.setOnClickListener {
-            finish()
+            this@SubActivity2.finishAffinity()
         }
+        gridview_button.setOnClickListener ({
+            val intent2_grid = Intent(this,SubActivity2_2::class.java)
+            startActivity(intent2_grid)
+        })
     }
     private fun zoomImageFromThumb(thumbView: View, imageResId: Int) {
         // If there's an animation in progress, cancel it
