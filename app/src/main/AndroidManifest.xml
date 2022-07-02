@@ -20,6 +20,8 @@
         <activity
             android:name=".SubActivity3"
             android:exported="false" />
+        <activity android:name=".EditActivity"/>
+        <activity android:name=".NewNotepadActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
