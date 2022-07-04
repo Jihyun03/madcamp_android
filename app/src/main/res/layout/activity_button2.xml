@@ -12,48 +12,267 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-                android:orientation="horizontal"
-            android:padding="16dp">
-
+                android:orientation="horizontal">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="10dp">
             <ImageButton
+                android:backgroundTint="@color/white"
                 android:id="@+id/thumb_button1"
                 android:layout_width="92dp"
                 android:layout_height="75dp"
-                android:layout_marginRight="1dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/cityscape1" />
-
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="10dp">
             <ImageButton
+                android:backgroundTint="@color/white"
                 android:id="@+id/thumb_button2"
                 android:layout_width="100dp"
                 android:layout_height="75dp"
-                android:layout_marginRight="1dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/cityscape2" />
-
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="10dp">
             <ImageButton
+                android:backgroundTint="@color/white"
                 android:id="@+id/thumb_button3"
                 android:layout_width="100dp"
                 android:layout_height="75dp"
-                android:layout_marginRight="1dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/woods1" />
-
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="10dp">
             <ImageButton
+                android:backgroundTint="@color/white"
                 android:id="@+id/thumb_button4"
                 android:layout_width="100dp"
                 android:layout_height="75dp"
-                android:layout_marginRight="1dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/woods2" />
-
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="10dp">
             <ImageButton
+                android:backgroundTint="@color/white"
                 android:id="@+id/thumb_button5"
                 android:layout_width="100dp"
                 android:layout_height="75dp"
-                android:layout_marginRight="1dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/photo1" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="10dp">
+                <ImageButton
+                    android:backgroundTint="@color/white"
+                    android:id="@+id/thumb_button6"
+                    android:layout_width="92dp"
+                    android:layout_height="75dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/space1" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="10dp">
+                <ImageButton
+                    android:backgroundTint="@color/white"
+                    android:id="@+id/thumb_button7"
+                    android:layout_width="100dp"
+                    android:layout_height="75dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/space2" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="10dp">
+                <ImageButton
+                    android:backgroundTint="@color/white"
+                    android:id="@+id/thumb_button8"
+                    android:layout_width="100dp"
+                    android:layout_height="75dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/soccer" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="10dp">
+                <ImageButton
+                    android:backgroundTint="@color/white"
+                    android:id="@+id/thumb_button9"
+                    android:layout_width="100dp"
+                    android:layout_height="75dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/sea1" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="10dp">
+                <ImageButton
+                    android:backgroundTint="@color/white"
+                    android:id="@+id/thumb_button10"
+                    android:layout_width="100dp"
+                    android:layout_height="75dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/police" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="10dp">
+                <ImageButton
+                    android:backgroundTint="@color/white"
+                    android:id="@+id/thumb_button11"
+                    android:layout_width="92dp"
+                    android:layout_height="75dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/plant1" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="10dp">
+                <ImageButton
+                    android:backgroundTint="@color/white"
+                    android:id="@+id/thumb_button12"
+                    android:layout_width="100dp"
+                    android:layout_height="75dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/nyang" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="10dp">
+                <ImageButton
+                    android:backgroundTint="@color/white"
+                    android:id="@+id/thumb_button13"
+                    android:layout_width="100dp"
+                    android:layout_height="75dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/maplestory" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="10dp">
+                <ImageButton
+                    android:backgroundTint="@color/white"
+                    android:id="@+id/thumb_button14"
+                    android:layout_width="100dp"
+                    android:layout_height="75dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/homework" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="10dp">
+                <ImageButton
+                    android:backgroundTint="@color/white"
+                    android:id="@+id/thumb_button15"
+                    android:layout_width="100dp"
+                    android:layout_height="75dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/flowers" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="10dp">
+                <ImageButton
+                    android:backgroundTint="@color/white"
+                    android:id="@+id/thumb_button16"
+                    android:layout_width="92dp"
+                    android:layout_height="75dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/fish" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="10dp">
+                <ImageButton
+                    android:backgroundTint="@color/white"
+                    android:id="@+id/thumb_button17"
+                    android:layout_width="100dp"
+                    android:layout_height="75dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/dog" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="10dp">
+                <ImageButton
+                    android:backgroundTint="@color/white"
+                    android:id="@+id/thumb_button18"
+                    android:layout_width="100dp"
+                    android:layout_height="75dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/basketball" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="10dp">
+                <ImageButton
+                    android:backgroundTint="@color/white"
+                    android:id="@+id/thumb_button19"
+                    android:layout_width="100dp"
+                    android:layout_height="75dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/study" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="10dp">
+                <ImageButton
+                    android:backgroundTint="@color/white"
+                    android:id="@+id/thumb_button20"
+                    android:layout_width="100dp"
+                    android:layout_height="75dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/time" />
+            </androidx.cardview.widget.CardView>
         </LinearLayout>
     </HorizontalScrollView>
     <ImageView

@@ -16,7 +16,7 @@ import android.widget.ImageView
 import androidx.fragment.app.FragmentActivity
 import kotlinx.android.synthetic.main.activity_button2.*
 
-class SubActivity2 : FragmentActivity() {
+class SubActivity2 : AppCompatActivity() {
 
     private var currentAnimator: Animator? = null
 
@@ -45,6 +45,66 @@ class SubActivity2 : FragmentActivity() {
         val thumb5View : View =  findViewById(R.id.thumb_button5)
         thumb5View.setOnClickListener({
             zoomImageFromThumb(thumb5View,R.drawable.photo1)
+        })
+        val thumb6View : View =  findViewById(R.id.thumb_button6)
+        thumb6View.setOnClickListener({
+            zoomImageFromThumb(thumb6View,R.drawable.space1)
+        })
+        val thumb7View : View =  findViewById(R.id.thumb_button7)
+        thumb7View.setOnClickListener({
+            zoomImageFromThumb(thumb7View,R.drawable.space2)
+        })
+        val thumb8View : View =  findViewById(R.id.thumb_button8)
+        thumb8View.setOnClickListener({
+            zoomImageFromThumb(thumb8View,R.drawable.soccer)
+        })
+        val thumb9View : View =  findViewById(R.id.thumb_button9)
+        thumb9View.setOnClickListener({
+            zoomImageFromThumb(thumb9View,R.drawable.sea1)
+        })
+        val thumb10View : View =  findViewById(R.id.thumb_button10)
+        thumb10View.setOnClickListener({
+            zoomImageFromThumb(thumb10View,R.drawable.police)
+        })
+        val thumb11View : View =  findViewById(R.id.thumb_button11)
+        thumb11View.setOnClickListener({
+            zoomImageFromThumb(thumb11View,R.drawable.plant1)
+        })
+        val thumb12View : View =  findViewById(R.id.thumb_button12)
+        thumb12View.setOnClickListener({
+            zoomImageFromThumb(thumb12View,R.drawable.nyang)
+        })
+        val thumb13View : View =  findViewById(R.id.thumb_button13)
+        thumb13View.setOnClickListener({
+            zoomImageFromThumb(thumb13View,R.drawable.maplestory)
+        })
+        val thumb14View : View =  findViewById(R.id.thumb_button14)
+        thumb14View.setOnClickListener({
+            zoomImageFromThumb(thumb14View,R.drawable.homework)
+        })
+        val thumb15View : View =  findViewById(R.id.thumb_button15)
+        thumb15View.setOnClickListener({
+            zoomImageFromThumb(thumb15View,R.drawable.flowers)
+        })
+        val thumb16View : View =  findViewById(R.id.thumb_button16)
+        thumb16View.setOnClickListener({
+            zoomImageFromThumb(thumb16View,R.drawable.fish)
+        })
+        val thumb17View : View =  findViewById(R.id.thumb_button17)
+        thumb17View.setOnClickListener({
+            zoomImageFromThumb(thumb17View,R.drawable.dog)
+        })
+        val thumb18View : View =  findViewById(R.id.thumb_button18)
+        thumb18View.setOnClickListener({
+            zoomImageFromThumb(thumb18View,R.drawable.basketball)
+        })
+        val thumb19View : View =  findViewById(R.id.thumb_button19)
+        thumb19View.setOnClickListener({
+            zoomImageFromThumb(thumb19View,R.drawable.study)
+        })
+        val thumb20View : View =  findViewById(R.id.thumb_button20)
+        thumb20View.setOnClickListener({
+            zoomImageFromThumb(thumb20View,R.drawable.time)
         })
 
         shortAnimationDuration = resources.getInteger(android.R.integer.config_shortAnimTime)
