@@ -67,7 +67,7 @@ class SubActivity1 : AppCompatActivity() {
             startProcess()
         }
         else{
-            Toast.makeText(this@SubActivity1,"연락처 접근 권한을 허용하셔야합니다.",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@SubActivity1,"설정에서 연락처 접근 권한을 허용해야합니다.",Toast.LENGTH_SHORT).show()
         }
     }
     //way2. 내장 주소록에서 받아오기
