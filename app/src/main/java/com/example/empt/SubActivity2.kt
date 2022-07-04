@@ -16,7 +16,7 @@ import android.widget.ImageView
 import androidx.fragment.app.FragmentActivity
 import kotlinx.android.synthetic.main.activity_button2.*
 
-class SubActivity2 : FragmentActivity() {
+class SubActivity2 : AppCompatActivity() {
 
     private var currentAnimator: Animator? = null
 

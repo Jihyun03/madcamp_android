@@ -11,7 +11,6 @@ import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import kotlin.random.Random
 
 class NoteAdapter(private val items: List<NoteList>) :
     RecyclerView.Adapter<NoteAdapter.ViewHolder>()  {
@@ -42,14 +41,14 @@ class NoteAdapter(private val items: List<NoteList>) :
             title.text = item.title
             contents.text = item.contents
 
-            when(item.color) {
-                "0" -> view.setBackgroundResource(R.drawable.rounding_title)
-                "1" -> view.setBackgroundResource(R.drawable.rounding_content)
-                "2" -> view.setBackgroundResource(R.drawable.rounding_blue)
-                "3" -> view.setBackgroundResource(R.drawable.rounding_purple)
-                "4" -> view.setBackgroundResource(R.drawable.rounding_yellow)
-                else -> view.setBackgroundResource(R.drawable.rounding_title)
-            }
+//            when(item.color) {
+//                "0" -> view.setBackgroundResource(R.drawable.rounding_one)
+//                "1" -> view.setBackgroundResource(R.drawable.rounding_one)
+//                "2" -> view.setBackgroundResource(R.drawable.rounding_one)
+//                "3" -> view.setBackgroundResource(R.drawable.rounding_one)
+//                "4" -> view.setBackgroundResource(R.drawable.rounding_one)
+//                else -> view.setBackgroundResource(R.drawable.rounding_one)
+//            }
 
             view.setOnClickListener { v ->
 

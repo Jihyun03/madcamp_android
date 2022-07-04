@@ -18,5 +18,5 @@
     <!-- 라운드 테두리 두께 / 색상 설정 -->
     <stroke
         android:width="3dp"
-        android:color="#C3ADFF" />
+        android:color="#455A64" />
 </shape>
