@@ -3,6 +3,8 @@ package com.example.empt
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import kotlinx.android.synthetic.main.activity_button2.*
@@ -21,10 +23,7 @@ class SubActivity2_2 : AppCompatActivity() {
         backbutton2_2.setOnClickListener {
             this@SubActivity2_2.finishAffinity()
         }
-        scrollview_button.setOnClickListener ({
-            val intent2_scroll = Intent(this,SubActivity2::class.java)
-            startActivity(intent2_scroll)
-        })
+
     }
     private fun initRecycler() {
 
@@ -56,5 +55,18 @@ class SubActivity2_2 : AppCompatActivity() {
 
          }
 
+    }
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_sub_2_2, menu)
+        return true
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.Toscroll -> {
+                val intent_two_two_grid = Intent(this,SubActivity2::class.java)
+                startActivity(intent_two_two_grid)
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 }

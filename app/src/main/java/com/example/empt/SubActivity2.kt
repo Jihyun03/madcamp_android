@@ -10,9 +10,13 @@ import android.graphics.Rect
 import android.graphics.RectF
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.view.animation.DecelerateInterpolator
 import android.widget.ImageView
+import android.widget.SearchView
+import android.widget.Toast
 import androidx.fragment.app.FragmentActivity
 import kotlinx.android.synthetic.main.activity_button2.*
 
@@ -111,10 +115,7 @@ class SubActivity2 : AppCompatActivity() {
         backbutton2.setOnClickListener {
             this@SubActivity2.finishAffinity()
         }
-        gridview_button.setOnClickListener ({
-            val intent2_grid = Intent(this,SubActivity2_2::class.java)
-            startActivity(intent2_grid)
-        })
+
     }
     private fun zoomImageFromThumb(thumbView: View, imageResId: Int) {
         // If there's an animation in progress, cancel it
@@ -241,5 +242,17 @@ class SubActivity2 : AppCompatActivity() {
             }
         }
     }
-
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_sub_2, menu)
+        return true
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.Togrid -> {
+                val intent_two_grid = Intent(this,SubActivity2_2::class.java)
+                startActivity(intent_two_grid)
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }
 }
