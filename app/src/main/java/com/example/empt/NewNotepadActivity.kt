@@ -56,7 +56,7 @@ class NewNotepadActivity : AppCompatActivity() {
                 saveData.put("title", title)
                 saveData.put("content", content)
                 saveData.put("time", time)
-                saveData.put("color", Random.nextInt(5).toString())
+                saveData.put("color", 1.toString())
 
                 database.insert(tableName, null, saveData)
 

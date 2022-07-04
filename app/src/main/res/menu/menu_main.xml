@@ -3,18 +3,18 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/menu_search"
-        android:icon="@drawable/search"
         android:title="Search"
         app:actionViewClass="android.widget.SearchView"
-        app:showAsAction="always" />
+        app:showAsAction="always"
+        app:searchIcon="@drawable/search_icon"/>
     <item
         android:id="@+id/menu_layout"
-        android:icon="@drawable/layout64"
-        android:title="검색"
+        android:icon="@drawable/option"
+        android:title="정렬방식"
         app:showAsAction="always" />
     <item
         android:id="@+id/menu_sort"
-        android:icon="@drawable/sort_descending"
-        android:title="정렬"
+        android:icon="@drawable/sort_down"
+        android:title="정렬순서"
         app:showAsAction="ifRoom" />
 </menu>
