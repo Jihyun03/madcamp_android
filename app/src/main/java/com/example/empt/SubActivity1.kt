@@ -1,11 +1,13 @@
 package com.example.empt
 
 import android.Manifest
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.ContactsContract
+import android.provider.Settings
 import android.util.Log
 import android.widget.ListAdapter
 import android.widget.Toast
@@ -51,8 +53,7 @@ class SubActivity1 : AppCompatActivity() {
 //        } catch (e:JSONException){
 //            e.printStackTrace()
 //        }
-        PNAdapter = PNListAdapter(this,phonenumlist)
-        phonenum_list.adapter = PNAdapter
+
         backbutton1.setOnClickListener {
             finish()
         }
@@ -85,6 +86,8 @@ class SubActivity1 : AppCompatActivity() {
             val phone = PhoneNum(name,number)
             phonenumlist.add(phone)
         }
+        PNAdapter = PNListAdapter(this,phonenumlist)
+        phonenum_list.adapter = PNAdapter
     }
 
 
