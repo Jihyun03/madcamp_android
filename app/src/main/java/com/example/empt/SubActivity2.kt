@@ -32,10 +32,7 @@ import com.bumptech.glide.load.resource.bitmap.BitmapTransitionOptions.with
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions.with
 import kotlinx.android.synthetic.main.activity_button2.*
 import kotlinx.android.synthetic.main.camera_layout.*
-import java.io.File
-import java.io.IOException
-import java.text.SimpleDateFormat
-import java.util.*
+
 
 class SubActivity2 : AppCompatActivity() {
 

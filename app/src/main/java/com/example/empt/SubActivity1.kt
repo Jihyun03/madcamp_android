@@ -3,6 +3,7 @@ package com.example.empt
 import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.net.Uri
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -12,6 +13,7 @@ import android.util.Log
 import android.widget.ListAdapter
 import android.widget.Toast
 import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import kotlinx.android.synthetic.main.activity_button1.*
@@ -68,7 +70,8 @@ class SubActivity1 : AppCompatActivity() {
             startProcess()
         }
         else{
-            Toast.makeText(this@SubActivity1,"설정에서 연락처 접근 권한을 허용해야합니다.",Toast.LENGTH_SHORT).show()
+            //Toast.makeText(this@SubActivity1,"설정에서 연락처 접근 권한을 허용해야합니다.",Toast.LENGTH_SHORT).show()
+            showDialogToGetPermission()
         }
     }
     //way2. 내장 주소록에서 받아오기
@@ -90,6 +93,21 @@ class SubActivity1 : AppCompatActivity() {
         phonenum_list.adapter = PNAdapter
     }
 
+    private fun showDialogToGetPermission(){
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("권한 요청").setMessage("연락처 접근 권한을 부여해야합니다.")
+        builder.setPositiveButton("OK") { dialogInterface, i ->
+            val intent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS)
+            intent.setData(Uri.fromParts("package", packageName, null))
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            startActivity(intent)   // 6
+        }
+        builder.setNegativeButton("Later") { dialogInterface, i ->
+            // ignore
+        }
+        val dialog = builder.create()
+        dialog.show()
+    }
 
 
 
