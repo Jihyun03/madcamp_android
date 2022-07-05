@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 
 import android.Manifest
 import android.app.Activity
+import android.content.ContentValues
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.net.Uri
@@ -18,8 +19,11 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import kotlinx.android.synthetic.main.activity_button2.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_sub_2_2_photo.*
+import java.io.FileOutputStream
+import java.text.SimpleDateFormat
 
 
 class SubActivity2_2_zoomActivity : AppCompatActivity() {
@@ -93,8 +97,6 @@ class SubActivity2_2_zoomActivity : AppCompatActivity() {
                 for(grant in grantResults){
                     if(grant != PackageManager.PERMISSION_GRANTED){
                         //권한이 승인되지 않았다면 return 을 사용하여 메소드를 종료시켜 줍니다
-                        Toast.makeText(this,"저장소 권한을 승인해야지만 앱을 사용할 수 있습니다..",Toast.LENGTH_SHORT).show()
-                        finish()
                         showDialogToGetPermission()
                         return
                     }
@@ -144,6 +146,4 @@ class SubActivity2_2_zoomActivity : AppCompatActivity() {
         val dialog = builder.create()
         dialog.show()
     }
-
-
 }
