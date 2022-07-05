@@ -27,6 +27,8 @@
 </p>
 
 ## 2. TAB2 나만의 앨범
+* 크게 view, textbar button, back button으로 이루어져 있습니다. tab2의 첫번째 layout은 이미지들을 scrollview를 이용하여 보여주며 만약 이미지를 클릭할 경우, 확대된 image를 볼 수 있습니다. textbar에는 두 개의 버튼이 있는데, 하나는 뷰 전환으로 이 버튼을 누를 경우 갤러리를 scrollview가 아닌 recyclerview로 볼 수 있습니다. 이 경우 새로운 activity로 전환이 이루어집니다. 또한 backbutton을 누르면 main 화면으로 되돌아가게 됩니다. 
+* textbar에 있는 나머지 하나는 카메라 버튼으로 누를 경우 아래 사진과 같이 카메라 접근 권한을 요청하게 됩니다. 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/76734678/177277846-61aca445-7a29-4412-a44e-39e30076f83f.png" width="270" height="480">
   <img src="https://user-images.githubusercontent.com/76734678/177277879-ee962b6c-5e3c-4a67-9f8b-0e47dbb78aec.png" width="270" height="480">
