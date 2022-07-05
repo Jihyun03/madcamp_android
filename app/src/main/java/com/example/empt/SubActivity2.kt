@@ -30,8 +30,6 @@ import com.bumptech.glide.GenericTransitionOptions.with
 import com.bumptech.glide.Glide.with
 import com.bumptech.glide.load.resource.bitmap.BitmapTransitionOptions.with
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions.with
-import com.gun0912.tedpermission.PermissionListener
-import com.gun0912.tedpermission.normal.TedPermission
 import kotlinx.android.synthetic.main.activity_button2.*
 import kotlinx.android.synthetic.main.camera_layout.*
 import java.io.File
@@ -45,8 +43,6 @@ class SubActivity2 : AppCompatActivity() {
 
     private var shortAnimationDuration: Int = 0
 
-    private val REQUEST_IMAGE_CAPTURE = 1
-    private lateinit var currentPhotoPath: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -271,89 +267,10 @@ class SubActivity2 : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.Togrid -> {
-                val intent_two_grid = Intent(this,SubActivity2_2::class.java)
+                val intent_two_grid = Intent(this, SubActivity2_2::class.java)
                 startActivity(intent_two_grid)
-            }
-            R.id.TakePhoto -> {
-                settingPermission()
-                startCapture()
             }
         }
         return super.onOptionsItemSelected(item)
-    }
-    fun settingPermission(){
-        var permis = object  : PermissionListener {
-            //            어떠한 형식을 상속받는 익명 클래스의 객체를 생성하기 위해 다음과 같이 작성
-            override fun onPermissionGranted() {
-                Toast.makeText(this@SubActivity2, "권한 허가", Toast.LENGTH_SHORT)
-                    .show()
-            }
-
-            override fun onPermissionDenied(deniedPermissions: MutableList<String>?) {
-                Toast.makeText(this@SubActivity2, "권한 거부", Toast.LENGTH_SHORT)
-                    .show()
-                    ActivityCompat.finishAffinity(this@SubActivity2) // 권한 거부시 앱 종료
-            }
-        }
-
-        TedPermission.create()
-            .setPermissionListener(permis)
-            .setRationaleMessage("카메라 사진 권한 필요")
-            .setDeniedMessage("카메라 권한 요청 거부")
-            .setPermissions(
-                android.Manifest.permission.WRITE_EXTERNAL_STORAGE,
-//                android.Manifest.permission.READ_EXTERNAL_STORAGE,
-                android.Manifest.permission.CAMERA)
-            .check()
-    }
-    @Throws(IOException::class)
-    private fun createImageFile() : File{
-        val timeStamp : String = SimpleDateFormat("yyyyMMdd_HHmmss").format(Date())
-        val storageDir : File? = getExternalFilesDir(Environment.DIRECTORY_PICTURES)
-        return File.createTempFile(
-            "JPEG_${timeStamp}_",
-            ".jpg",
-            storageDir
-        ).apply{
-            currentPhotoPath = absolutePath
-        }
-    }
-    fun startCapture(){
-        Intent(MediaStore.ACTION_IMAGE_CAPTURE).also { takePictureIntent ->
-            takePictureIntent.resolveActivity(packageManager)?.also {
-                val photoFile: File? = try{
-                    createImageFile()
-                }catch(ex:IOException){
-                    null
-                }
-                photoFile?.also{
-                    val photoURI : Uri = FileProvider.getUriForFile(
-                        this,
-                        "com.exmaple.empt.fileprovider",
-                        it
-                    )
-                    takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI)
-                    startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE)
-                }
-            }
-        }
-    }
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-
-        if(requestCode == REQUEST_IMAGE_CAPTURE && resultCode == Activity.RESULT_OK){
-            val file = File(currentPhotoPath)
-            if (Build.VERSION.SDK_INT < 28) {
-                val bitmap = MediaStore.Images.Media
-                    .getBitmap(contentResolver, Uri.fromFile(file))
-                img_picture.setImageBitmap(bitmap)
-            }
-            else{
-                val decode = ImageDecoder.createSource(this.contentResolver,
-                    Uri.fromFile(file))
-                val bitmap = ImageDecoder.decodeBitmap(decode)
-                img_picture.setImageBitmap(bitmap)
-            }
-        }
     }
 }
