@@ -4,6 +4,6 @@
     <item
         android:id="@+id/Toscroll"
         android:icon="@drawable/scrollimage"
-        android:title="그리드뷰"
+        android:title="스크롤뷰"
         app:showAsAction="always" />
 </menu>

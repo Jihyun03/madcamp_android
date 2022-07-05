@@ -6,4 +6,9 @@
         android:icon="@drawable/gridimage"
         android:title="그리드뷰"
         app:showAsAction="always" />
+    <item
+        android:id="@+id/TakePhoto"
+        android:icon="@drawable/camera"
+        android:title="사진"
+        app:showAsAction="always" />
 </menu>
