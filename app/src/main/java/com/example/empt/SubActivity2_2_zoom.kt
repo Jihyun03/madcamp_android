@@ -10,9 +10,12 @@ import android.Manifest
 import android.app.Activity
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
+import android.net.Uri
 import android.os.Build
 import android.provider.MediaStore
+import android.provider.Settings
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import kotlinx.android.synthetic.main.activity_main.*
@@ -92,6 +95,7 @@ class SubActivity2_2_zoomActivity : AppCompatActivity() {
                         //권한이 승인되지 않았다면 return 을 사용하여 메소드를 종료시켜 줍니다
                         Toast.makeText(this,"저장소 권한을 승인해야지만 앱을 사용할 수 있습니다..",Toast.LENGTH_SHORT).show()
                         finish()
+                        showDialogToGetPermission()
                         return
                     }
                 }
@@ -101,7 +105,7 @@ class SubActivity2_2_zoomActivity : AppCompatActivity() {
             FLAG_PERM_CAMERA ->{
                 for(grant in grantResults){
                     if(grant != PackageManager.PERMISSION_GRANTED){
-                        Toast.makeText(this,"카메라 권한을 승인해야지만 카메라를 사용할 수 있습니다.",Toast.LENGTH_SHORT).show()
+                        showDialogToGetPermission()
                         return
                     }
                 }
@@ -124,6 +128,21 @@ class SubActivity2_2_zoomActivity : AppCompatActivity() {
                 }
             }
         }
+    }
+    private fun showDialogToGetPermission(){
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("권한 요청").setMessage("카메라 접근 권한을 부여해야합니다.")
+        builder.setPositiveButton("OK") { dialogInterface, i ->
+            val intent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS)
+            intent.setData(Uri.fromParts("package", packageName, null))
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            startActivity(intent)   // 6
+        }
+        builder.setNegativeButton("Later") { dialogInterface, i ->
+            // ignore
+        }
+        val dialog = builder.create()
+        dialog.show()
     }
 
 
