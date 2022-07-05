@@ -270,6 +270,10 @@ class SubActivity2 : AppCompatActivity() {
                 val intent_two_grid = Intent(this, SubActivity2_2::class.java)
                 startActivity(intent_two_grid)
             }
+            R.id.TakePhoto -> {
+                val intent_zoom_1 = Intent(this, SubActivity2_2_zoomActivity::class.java)
+                startActivity(intent_zoom_1)
+            }
         }
         return super.onOptionsItemSelected(item)
     }
