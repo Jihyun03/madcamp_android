@@ -54,10 +54,9 @@ class SubActivity2_2 : AppCompatActivity() {
              add(Img(image = R.drawable.basketball,id = 18))
              add(Img(image = R.drawable.study, id = 19))
              add(Img(image = R.drawable.time, id = 20))
-             imgadapter.ImgData=ImgData
-             imgadapter.notifyDataSetChanged()
-
          }
+        imgadapter.ImgData=ImgData
+        imgadapter.notifyDataSetChanged()
 
     }
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
