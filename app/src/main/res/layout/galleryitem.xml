@@ -10,7 +10,7 @@
         android:layout_marginVertical="5dp"
         android:layout_marginHorizontal="20dp"
         >
-    <ImageView
+    <ImageButton
         android:id="@+id/MyImage"
         android:layout_width="match_parent"
         android:layout_marginHorizontal="20dp"
