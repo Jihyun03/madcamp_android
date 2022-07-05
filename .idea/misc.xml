@@ -6,14 +6,11 @@
         <entry key="..\:/Users/parkh/AndroidStudioProjects/my_android_assign/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.13" />
         <entry key="..\:/Users/parkh/AndroidStudioProjects/my_android_assign/app/src/main/res/drawable/ic_search_black_24dp.xml" value="0.13" />
         <entry key="..\:/Users/parkh/AndroidStudioProjects/my_android_assign/app/src/main/res/drawable/rounding_content.xml" value="0.13" />
-        <entry key="..\:/Users/parkh/AndroidStudioProjects/my_android_assign/app/src/main/res/drawable/rounding_one.xml" value="0.13" />
         <entry key="..\:/Users/parkh/AndroidStudioProjects/my_android_assign/app/src/main/res/layout/activity_button1.xml" value="0.1" />
-        <entry key="..\:/Users/parkh/AndroidStudioProjects/my_android_assign/app/src/main/res/layout/activity_button2.xml" value="0.14945652173913043" />
         <entry key="..\:/Users/parkh/AndroidStudioProjects/my_android_assign/app/src/main/res/layout/activity_button3.xml" value="0.14945652173913043" />
         <entry key="..\:/Users/parkh/AndroidStudioProjects/my_android_assign/app/src/main/res/layout/activity_edit.xml" value="0.14945652173913043" />
         <entry key="..\:/Users/parkh/AndroidStudioProjects/my_android_assign/app/src/main/res/layout/activity_main.xml" value="0.14945652173913043" />
         <entry key="..\:/Users/parkh/AndroidStudioProjects/my_android_assign/app/src/main/res/layout/activity_new_notepad.xml" value="0.14945652173913043" />
-        <entry key="..\:/Users/parkh/AndroidStudioProjects/my_android_assign/app/src/main/res/layout/activity_sub_2_2_photo.xml" value="0.14945652173913043" />
         <entry key="..\:/Users/parkh/AndroidStudioProjects/my_android_assign/app/src/main/res/layout/camera_layout.xml" value="0.14945652173913043" />
         <entry key="..\:/Users/parkh/AndroidStudioProjects/my_android_assign/app/src/main/res/layout/layout_recyclerview.xml" value="0.14945652173913043" />
         <entry key="..\:/Users/parkh/AndroidStudioProjects/my_android_assign/app/src/main/res/menu/menu_sub_2_2.xml" value="0.15677083333333333" />
@@ -34,7 +31,7 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/Empt/app/src/main/res/layout/activity_button3.xml" value="0.1" />
         <entry key="..\:/Users/user/AndroidStudioProjects/Empt/app/src/main/res/layout/activity_edit.xml" value="0.2" />
         <entry key="..\:/Users/user/AndroidStudioProjects/Empt/app/src/main/res/layout/activity_main.xml" value="0.28607594936708863" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/Empt/app/src/main/res/layout/activity_new_notepad.xml" value="0.2" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/Empt/app/src/main/res/layout/activity_new_notepad.xml" value="0.4" />
         <entry key="..\:/Users/user/AndroidStudioProjects/Empt/app/src/main/res/layout/activity_sub22.xml" value="0.34646739130434784" />
         <entry key="..\:/Users/user/AndroidStudioProjects/Empt/app/src/main/res/layout/activity_write.xml" value="0.1875" />
         <entry key="..\:/Users/user/AndroidStudioProjects/Empt/app/src/main/res/layout/layout_recyclerview.xml" value="0.2391304347826087" />

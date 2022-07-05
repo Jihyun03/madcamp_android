@@ -27,7 +27,8 @@
         <activity
             android:name=".SubActivity2_2_zoomActivity"
             android:exported="false"
-            android:taskAffinity="com.gallery.empt"/>
+            android:taskAffinity="com.gallery.empt"
+            />
         <activity
             android:name=".SubActivity3"
             android:exported="false" />
