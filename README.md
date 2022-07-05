@@ -1,9 +1,7 @@
-# madcamp_android
 # Project Name : My First App 
-# Team Mate : 하현수, 이지현
-# About Project 
+Team Mate : 하현수, 이지현
 
-
+About Project 
 
 1. TAB1, 주소록 보여주기
 <p align="center">
