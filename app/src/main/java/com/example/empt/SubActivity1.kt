@@ -81,7 +81,8 @@ class SubActivity1 : AppCompatActivity() {
         val proj = arrayOf(ContactsContract.CommonDataKinds.Phone.CONTACT_ID,
         ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME,
         ContactsContract.CommonDataKinds.Phone.NUMBER)
-        val cursor = contentResolver.query(phoneUri,proj,null,null,null)
+        val sortOrder = ContactsContract.Contacts.DISPLAY_NAME + " COLLATE LOCALIZED ASC"
+        val cursor = contentResolver.query(phoneUri,proj,null,null,sortOrder)
         while(cursor?.moveToNext()?:false){
             val id = cursor?.getString(0)
             val name = cursor?.getString(1)
@@ -95,14 +96,14 @@ class SubActivity1 : AppCompatActivity() {
 
     private fun showDialogToGetPermission(){
         val builder = AlertDialog.Builder(this)
-        builder.setTitle("권한 요청").setMessage("연락처 접근 권한을 부여해야합니다.")
-        builder.setPositiveButton("OK") { dialogInterface, i ->
+        builder.setTitle("권한 요청").setMessage("설정에서 연락처 접근 권한을 부여해야합니다.")
+        builder.setPositiveButton("설정으로 가기") { dialogInterface, i ->
             val intent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS)
             intent.setData(Uri.fromParts("package", packageName, null))
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(intent)   // 6
         }
-        builder.setNegativeButton("Later") { dialogInterface, i ->
+        builder.setNegativeButton("나중에") { dialogInterface, i ->
             // ignore
         }
         val dialog = builder.create()
